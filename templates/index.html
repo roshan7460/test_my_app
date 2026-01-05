@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excel to PDF Converter</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Top bar -->
+        <div class="top-bar">
+            <div class="upload-section">
+                <input type="file" id="fileInput">
+                <button onclick="uploadExcel()">Upload</button>
+            </div>
+
+            <button class="pdf-btn" onclick="generatePDF()">Save as PDF</button>
+            <div>
+                <button onclick="selectAllColumns()">Select All</button>
+                <button onclick="deselectAllColumns()">Deselect All</button>
+            </div>
+
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <select id="sumColumnSelect"></select>
+            <button onclick="calculateSum()">Calculate Sum</button>
+        </div>
+        <button onclick="resetAll()">Reset</button>
+
+
+        <!-- Preview -->
+        <div id="preview"></div>
+
+    </div>
+
+    <script src="/static/script.js?v=4"></script>
+</body>
+
+</html>
